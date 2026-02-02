@@ -1,7 +1,22 @@
-__pycache__
-*.pytest_cache
+# Environments (The 200,000+ files)
+T1Dc_win/
+T1Dc/
 venv/
-# .env
-*.db
-*.idea
+.venv/
 *.ruff_cache
+
+# Installers
+*.sh
+*.exe
+*.msi
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local environment/IDE settings
+.vscode/
+.idea/
+
+# Large Data
+1_food_datasets/IFood2019/
+1_datasets/

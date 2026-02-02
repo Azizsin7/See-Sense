@@ -1,0 +1,21 @@
+# Core Data Science
+pandas
+numpy
+pathlib
+scipy
+
+# Computer Vision & Image Processing
+opencv-python
+pillow
+
+# Visualization & Analysis
+matplotlib
+seaborn
+
+# Deep Learning (Optimized for RTX 3050/3000 series)
+tensorflow>=2.15.0
+keras
+h5py
+
+# Note: tkinter is built into Python on Windows. 
+# Linux users may need: sudo apt-get install python3-tk

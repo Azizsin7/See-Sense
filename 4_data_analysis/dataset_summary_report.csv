@@ -1,0 +1,252 @@
+food_name,carbs_per_100g,image_count
+huitre,15,631
+macaron,55,631
+churro,35,624
+casserole,15,617
+crumb cake,45,604
+beet salad,8,602
+orzo,15,602
+chiffon cake,45,600
+enchilada,15,597
+compote,15,595
+crab food,15,595
+ceviche,15,593
+coffee cake,45,592
+burrito,25,591
+gnocchi,32,588
+macaroni and cheese,19,587
+couscous,23,586
+barbecued wing,5,586
+bread pudding,40,581
+lasagna,15,580
+dumpling,30,578
+fritter,15,574
+chocolate mousse,15,574
+deviled egg,1,572
+egg roll,25,572
+farfalle,15,570
+applesauce cake,45,569
+torte,15,563
+croquette,15,563
+bacon and eggs,2,562
+clam food,15,559
+coconut cake,45,553
+french toast,15,551
+creme brulee,15,550
+caprese salad,3,549
+custard,15,546
+bruschetta,15,545
+carrot cake,45,542
+cockle food,15,542
+apple pie,45,542
+meatball,15,541
+dolmas,15,540
+chicken cordon bleu,2,540
+terrine,15,539
+ambrosia food,16,539
+limpet food,15,536
+boiled egg,1,535
+omelette,1,534
+grilled cheese sandwich,20,534
+crab cake,45,533
+crayfish food,15,532
+beignet,52,532
+donut,50,531
+edamame,9,530
+barbecued spareribs,5,530
+nacho,15,530
+cannoli,15,529
+fondue,15,528
+fettuccine,25,526
+panna cotta,14,526
+linguine,25,524
+fried rice,30,521
+caesar salad,8,521
+chicken quesadilla,25,520
+baklava,40,520
+eggs benedict,15,520
+bacon lettuce tomato sandwich,15,518
+baby back rib,10,518
+ham and eggs,15,516
+croque madame,15,515
+gingerbread,40,515
+cannelloni,15,514
+biryani,32,513
+strudel,15,513
+oyster,5,513
+kabob,15,513
+gyoza,30,511
+frittata,15,510
+chow mein,15,508
+cottage pie,45,508
+coquilles saint jacques,15,506
+pad thai,35,506
+wonton,30,506
+confit,15,505
+meat loaf food,15,505
+brisket,0,504
+boston cream pie,45,504
+mussel,4,502
+chili,15,502
+lobster food,15,502
+grilled salmon,0,499
+hummus,14,499
+beef stroganoff,2,498
+chicken wing,0,498
+club sandwich,15,497
+tempura,20,496
+tenderloin,15,495
+apple turnover,38,494
+onion rings,38,494
+poi,15,493
+foie gras,5,492
+garlic bread,42,491
+crumpet,15,490
+chicken kiev,2,490
+pound cake,45,489
+stuffed peppers,10,488
+adobo,5,487
+bubble and squeak,15,484
+chop suey,15,483
+filet mignon,0,483
+falafel,32,480
+bibimbap,19,478
+upside down cake,45,478
+profiterole,15,478
+risotto,20,477
+ice cream,24,476
+ham sandwich,15,476
+peach melba,15,475
+beef carpaccio,1,474
+applesauce,15,472
+frozen yogurt,22,470
+pulled pork sandwich,25,467
+chicken curry,2,467
+souffle,15,467
+guacamole,9,465
+scallop,5,464
+spring roll,25,464
+buffalo wing,2,460
+pavlova,15,458
+pork chop,0,457
+strawberry shortcake,40,457
+ravioli,15,457
+baked alaska,15,457
+rock cake,45,456
+peking duck,5,456
+greek salad,7,456
+pate,15,456
+scampi,15,455
+rigatoni,25,453
+coq au vin,15,453
+savarin,15,452
+sashimi,0,452
+stuffed tomato,5,452
+flan,20,452
+tostada,15,451
+penne,25,451
+roulade,15,450
+huevos rancheros,15,448
+chicken provencale,2,447
+cupcake,50,446
+poached egg,1,446
+manicotti,15,446
+reuben,15,445
+fried egg,1,444
+stuffed cabbage,15,443
+gyro,15,440
+vol au vent,15,440
+samosa,35,440
+beef wellington,2,440
+taco,20,439
+paella,25,436
+cruller,15,435
+jerky,11,435
+miso soup,3,433
+fish stick,15,431
+tortellini,25,430
+carbonnade flamande,15,430
+french onion soup,8,430
+potpie,45,430
+escargot,2,428
+sponge cake,45,427
+tapenade,15,427
+lobster roll sandwich,18,427
+sausage roll,15,424
+clam chowder,9,423
+galantine,15,423
+shirred egg,15,423
+jambalaya,15,421
+beef bourguignonne,6,421
+sauerkraut,15,420
+victoria sandwich,15,420
+porridge,15,419
+tiramisu,30,417
+vermicelli,25,416
+tuna tartare,1,416
+fish and chips,15,416
+entrecote,15,415
+tagliatelle,15,414
+scrambled eggs,15,414
+sloppy joe,15,414
+osso buco,15,411
+fried calamari,15,409
+sukiyaki,15,407
+prime rib,0,407
+pilaf,28,404
+syllabub,15,403
+streusel,15,402
+beef tartare,2,401
+tamale,15,398
+cheesecake,26,394
+ramen,15,394
+moussaka,8,390
+fruitcake,45,390
+tetrazzini,15,388
+scotch egg,15,388
+eccles cake,45,385
+takoyaki,15,385
+pirogi,15,385
+ziti,30,383
+mostaccioli,15,382
+spaghetti carbonara,25,381
+haggis,15,379
+sushi,15,378
+shrimp and grits,15,375
+red velvet cake,45,375
+rissole,15,374
+waffle,33,371
+succotash,15,370
+kedgeree,15,370
+pancake,28,369
+pepper steak,2,368
+steak au poivre,2,367
+tamale pie,45,366
+schnitzel,15,360
+chocolate cake,53,357
+rugulah,15,356
+spaghetti bolognese,18,353
+toad in the hole,15,352
+poutine,25,352
+chicken marengo,2,349
+pizza,33,346
+blancmange,17,346
+salisbury steak,2,345
+hot and sour soup,5,338
+pho,10,336
+lobster bisque,7,331
+hot dog,18,330
+knish,27,327
+moo goo gai pan,15,325
+matzo ball,15,318
+lutefisk,15,318
+seaweed salad,10,317
+lobster thermidor,15,312
+scrapple,15,312
+french fries,35,310
+welsh rarebit,15,307
+sauerbraten,15,291
+hamburger,20,284
+steak tartare,2,283
+veal cordon bleu,15,259
+marble cake,45,33
