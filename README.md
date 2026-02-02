@@ -210,7 +210,7 @@ See-Sense/
 | **Architecture** | EfficientNetB0 |
 | **Training Dataset** | ~5,000+ validated images |
 | **Optimization** | Mixed Precision (FP16) |
-| **Model Size** | ~21MB |
+| **Model Size** | 91.9MB |
 | **Inference Speed** | <100ms per image (RTX 3050) |
 | **Memory Usage** | 3.2GB VRAM (limited) |
 
