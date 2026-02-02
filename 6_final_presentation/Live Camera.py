@@ -209,7 +209,7 @@ while True:
     try:
         if cv2.getWindowProperty(win_result, cv2.WND_PROP_VISIBLE) >= 1:
             cv2.destroyWindow(win_result)
-    except:
+    except Exception:
         pass
 
 # Cleanup

@@ -38,44 +38,40 @@ estimation rather than broad, non-specific food categories.
 
 ### 📂 train_set
 
-    - Type: Unstructured (Images)
-
-    - Contents: Thousands of images across 251 fine-grained food classes.
-
-    - T1D Relevance: Provides the visual diversity (lighting, angles, plating)
-    necessary for the model to recognize foods in real-world dining scenarios,
-    reducing the risk of misidentification which could lead to incorrect
-    insulin dosing.
+* **Type**: Unstructured (Images)
+* **Contents**: Thousands of images across 251 fine-grained food classes.
+* **T1D Relevance**: Provides the visual diversity (lighting, angles, plating)
+  necessary for the model to recognize foods in real-world dining scenarios,
+  reducing the risk of misidentification which could lead to incorrect
+  insulin dosing.
 
 ### 📂 val_set
 
-    - Type: Unstructured (Images)
-
-    - Contents: A separate set of images used to test the model’s accuracy on
-    unseen data.
-
-    - T1D Relevance: Critical for ensuring the model does not "memorize" specific
-    images but actually learns to identify the glucose-influencing agents
-    correctly across new and varied meal presentations.
+* **Type**: Unstructured (Images)
+* **Contents**: A separate set of images used to test the model’s accuracy on
+unseen data.
+* **T1D Relevance**: Critical for ensuring the model does not "memorize"
+specific images but actually learns to identify the glucose-influencing agents
+correctly across new and varied meal presentations.
 
 ### 📄 class_list.txt
 
-    - Type: Metadata / Structured
+* **Type:** Metadata / Structured
 
-    - Description: A mapping file linking numerical Class IDs to human-readable
-    food names.
+* **Description:** A mapping file linking numerical Class IDs to human-readable
+food names.
 
-    - Note: This file serves as the "Source of Truth" for the 251 categories
-    supported by the model.
+* **Note:** This file serves as the "Source of Truth" for the 251 categories
+supported by the model.
 
 ### 📄 train_labels.csv & val_labels.csv
 
-    - Type: Structured (Tabular)
+* **Type:** Structured (Tabular)
 
-    - Format: .csv
+* **Format:** .csv
 
-    - Columns: image_name, label
+* **Columns:** image_name, label
 
-    - T1D Relevance: These labels act as the "Gold Standard." In T1D management,
-    mislabeling a high-carb item as a low-carb item is a significant medical
-    risk; therefore, these labels are treated as high-veracity clinical targets.
+* **T1D Relevance:** These labels act as the "Gold Standard." In T1D management,
+mislabeling a high-carb item as a low-carb item is a significant medical
+risk; therefore, these labels are treated as high-veracity clinical targets.
