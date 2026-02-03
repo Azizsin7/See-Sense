@@ -27,9 +27,8 @@ an audit trail for clinical-grade project management.
 
 Milestone-by-milestone reflections covering the full project arc.
 
-- **0_domain_study.md**: Domain research and clinical context
-- **0_cross_cultural_collaboration.md**: Team collaboration norms
-- **1_problem_identification.md**: Problem scoping and validation
+- **0_domain_study_problem_identification .md**: Domain research,
+clinical context and problem identification
 - **1_food_datasets.md**: Dataset selection and sourcing
 - **2_data_preparation.md**: Data cleaning and mapping pipeline
 - **3_data_exploration.md**: Statistical audit and visualization
