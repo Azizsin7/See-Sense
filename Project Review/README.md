@@ -1,85 +1,149 @@
-# Notes
+# Project Review
 
-## Challenges
+A comprehensive record of the See-Sense project journey, from problem
+definition through final delivery. This folder documents team collaboration
+norms, learning goals, project constraints, and reflections on each
+milestone.
 
-This folder documents the technical journey of the **See-Sense** project,
-tracking the evolution of the dataset and the training iterations.
+## Purpose
+
+Project Review serves as the central hub for:
+
+- **Retrospectives**: Reflections on what went well, what could improve,
+  and lessons learned at each project milestone.
+- **Learning Goals**: Personal and team learning objectives aligned with
+  project phases.
+- **Constraints**: Project limitations, assumptions, and external factors
+  that shaped decisions.
+- **Collaboration & Norms**: Team agreements on communication, decision-
+  making, and working styles.
+
+This documentation ensures transparency, facilitates learning, and creates
+an audit trail for clinical-grade project management.
+
+## Folder Contents
+
+### [retrospectives/](retrospectives/)
+
+Milestone-by-milestone reflections covering the full project arc.
+
+- **0_domain_study.md**: Domain research and clinical context
+- **0_cross_cultural_collaboration.md**: Team collaboration norms
+- **1_problem_identification.md**: Problem scoping and validation
+- **1_food_datasets.md**: Dataset selection and sourcing
+- **2_data_preparation.md**: Data cleaning and mapping pipeline
+- **3_data_exploration.md**: Statistical audit and visualization
+- **4_data_analysis.md**: Clinical bucketing and bias detection
+- **5_model_training.md**: Deep learning model development
+- **6_final_presentation.md**: Final presentation and demo
+
+See [retrospectives/README.md](retrospectives/README.md) for detailed
+guidance on each milestone and how to use these documents.
+
+### [learning_goals.md](learning_goals.md)
+
+Personal and team learning objectives:
+
+- Skills to develop (technical and soft skills)
+- Knowledge areas to explore
+- Growth targets and success metrics
+- Alignment with project phases
+
+Update this document as the project progresses and priorities shift.
+
+### [constraints.md](constraints.md)
+
+Project constraints and limitations:
+
+- Technical constraints (hardware, software, data)
+- Time and resource constraints
+- Scope boundaries
+- External dependencies and regulations
+- Data privacy and ethical considerations
+
+Understanding constraints shapes realistic planning and risk mitigation.
+
+### [guide.md](guide.md)
+
+Quick reference guide for project review processes and best practices.
+
+## How to Use This Folder
+
+### For Team Onboarding
+
+Start with this README, then review:
+
+1. [constraints.md](constraints.md) - Understand project boundaries
+2. [learning_goals.md](learning_goals.md) - Align with team objectives
+3. [retrospectives/README.md](retrospectives/README.md) - Learn project arc
+
+### For Mid-Project Check-ins
+
+1. Review the current milestone's retrospective
+2. Check progress against learning goals
+3. Validate decisions against constraints
+4. Update retrospective with emerging insights
+
+### For Post-Project Reflection
+
+1. Read all retrospectives in sequence
+2. Identify patterns and themes
+3. Extract lessons for future projects
+4. Update constraints and learning goals based on actual outcomes
+
+### For Future Iterations
+
+1. Review action items in the final retrospective
+2. Use constraints as starting points for scope planning
+3. Update learning goals for the next cycle
+4. Link new retrospectives to prior milestones for continuity
+
+## Key Project Principles
+
+### Clinical Safety First
+
+Every decision prioritizes Type 1 Diabetes safety. Risk analysis and
+ethical review are built into each phase, not added afterward.
+
+### Data-Centric Design
+
+Quality data preparation, validation, and auditing prevent cascading
+errors. Invest early in data pipeline hygiene.
+
+### Transparency & Reproducibility
+
+All processes, decisions, and code are documented to enable others to
+replicate, audit, and extend the work. This is critical for clinical
+research.
+
+### Incremental Validation
+
+Validate early and often. Don't wait until project completion to test
+assumptions. Catch problems while they're still small.
+
+### Collaborative Learning
+
+Retrospectives aren't blame exercises—they're learning opportunities.
+Document wins and failures equally; both inform future work.
+
+## Getting Started
+
+1. **Read this README** to understand the folder's purpose
+2. **Review [constraints.md](constraints.md)** for project boundaries
+3. **Check [learning_goals.md](learning_goals.md)** for role's
+   focus areas
+4. **Start with [retrospectives/0_domain_study.md](retrospectives/
+   0_domain_study.md)** for the full project story
+
+## Project Status
+
+**Current Phase**: Complete (All milestones 0–6 documented)
+
+**Next Steps**: User testing, clinical validation, regulatory review,
+mobile deployment (see final retrospective for details)
 
 ---
 
-## Data Acquisition & Cleaning Issues
-
-### **Data Integrity (The "Gold" Dataset)**
-
-* The Issue: Training failed repeatedly with UnimplementedError or
-InvalidArgumentError mid-epoch.
-
-* The Discovery: We found Corrupted/Imposter Images. These were files that:
-
-  * Had a .jpg extension but were actually empty or contained HTML error text.
-
-  * Were truncated (half-downloaded), causing the PIL (Pillow) loader to crash.
-
-  * Used color spaces (like CMYK) that TensorFlow's decode_jpeg couldn't
-  handle, leading to "ghost" errors that only appeared after 2–3 hours of training.
-
-* The Solution: I built a rigorous cleaning pipeline to generate
-final_training_data_v3_gold.csv. This involved:
-
-  * The "Imposter" Filter: A script that physically opened every image file
-  using PIL.Image.open() and image.verify() to ensure the data was a valid,
-  readable image before adding it to the CSV.
-
-  * Path Standardization: Converted all Windows backslashes (\) to universal
-  forward slashes (/) so the model could train on Linux, Windows, or Cloud
-  environments without modification.
-
-  * Label Verification: Cross-referencing image IDs with the master
-  nutrition list to ensure "Apple" images weren't being fed into the
-  model with "Pizza" carb values.
-
-* Impact: Before this cleaning, the model had 0% progress because it crashed
-every single time it hit a bad file. After the "Gold" dataset was finalized,
-the model successfully completed its first full 25-epoch run.
-
----
-
-## Training & Hardware Optimization
-
-### **1. VRAM Management (RTX 3050)**
-
-* **Issue:** The model would crash with "Out of Memory" (OOM) errors.
-* **Solution:** * Limited GPU growth to **3.2GB**.
-  * Implemented **Mixed Precision (FP16)** via `mixed_float16` to speed up
-  training and reduce memory footprint.
-
-### **2. The "Anti-Cheat" Safety Lock**
-
-* **Issue:** Validation accuracy often plummeted when fine-tuning EfficientNet.
-* **Solution:** Manually froze all `BatchNormalization` layers to preserve
-pre-trained ImageNet statistics during the first phase of training.
-
----
-
-## Model Training History
-
-We iterated through multiple training sessions to find the best balance between
-accuracy and clinical safety.
-
-| Model Version | Architecture | Optimization | Accuracy | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| v1 (Baseline) | EfficientNetB0 | Default | ~50% | High Overfit |
-| v3 (Mixed) | EfficientNetB0 | Mixed Precision | ~70% | Faster Training |
-| v2 (Balanced) | EfficientNetB0 | Dropout 0.4 + BN Freeze | ~73% | Current |
-
-> **Note:** Final metrics are saved in `5_model_training/` alongside the
-`.keras` model files.
-
----
-
-## Key Learnings
-
-* **Data Quality > Model Complexity:** Spending time on the `v3_gold` CSV was
-more impactful than tweaking hyperparameters.
-* **Hardware Constraints:** Learning to work within a 4GB VRAM limit forced
-better efficiency in batch sizing and image preprocessing.
+For questions about project decisions, governance, or next steps,
+consult the relevant retrospective or constraint document. For learning
+priorities, refer to learning_goals.md.
