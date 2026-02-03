@@ -196,6 +196,7 @@ See-Sense/
 │   └── seesense_fresh_v1.keras  # Trained model
 ├── 6_final_presentation/     # User-facing applications
 │   └── Live Camera.py        # Real-time inference interface
+├── project_review/           # Project retrospectives, constraints, guides
 ├── requirements.txt          # Python dependencies
 ├── README.md                 # This file
 └── CONTRIBUTING.md           # Contribution guidelines
