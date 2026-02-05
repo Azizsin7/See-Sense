@@ -216,7 +216,9 @@ See-Sense/
 | **Memory Usage** | 3.2GB VRAM (limited) |
 
 * Performance metrics subject to dataset and training configuration. See
-`5_model_training/README.md` for detailed benchmarks.
+* `5_model_training/README.md` for detailed benchmarks.
+
+![Model Accuracy & Performance](accuracy_performance.png)
 
 ---
 
